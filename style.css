@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+#principal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-image: url("./peakFIT.jpg");
+  background-size: cover;
+  background-position: center 0px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  z-index: -1;
+}
+
+#body {
+  width: 100%;
+  min-height: 100px;
+  overflow: hidden;
+}
+
+#scroll {
+  margin: auto;
+  width: 200px;
+  height: 60px;
+}
+
+#title {
+  text-align: center;
+  font-weight: lighter;
+  font-size: 1.5em;
+  color: #fff;
+}
+
+#menorque {
+  transform: rotate(260deg);
+  color: yellow;
+  text-align: center;
+  font-size: 30px;
+  animation: flotar 1.5s ease-in-out infinite;
+}
+
+@keyframes flotar {
+  0% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(3px);
+  }
+}
+#contact {
+  width: 100%;
+  height: 100vh;
+  margin-top: 20px;
+  background-color: yellow;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.nav {
+  height: 2cm;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  margin: 0.5cm;
+  cursor: pointer;
+  transition: 1s;
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+}
+
+i {
+  margin: 10px;
+  color: yellow;
+}
+
+h1 {
+  color: #fff;
+  font-size: 60px;
+}
+
+.titulo {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 25%;
+}
+
+.logos {
+  position: fixed;
+  top: 95%;
+  right: 1%;
+  font-size: 22px;
+}
+
+#stronger {
+  margin-left: 10px;
+  margin-right: 10px;
+  color: yellow;
+}
+
+#excuses {
+  margin-left: 10px;
+  margin-right: 10px;
+  color: yellow;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: yellow;
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 70vh;
+  align-items: center;
+  border: 3px solid black;
+  border-radius: 15px;
+  box-shadow: 2px 2px 10px black;
+  background-color: black;
+  margin-right: 10%;
+}
+
+form h1 {
+  color: yellow;
+  text-align: center;
+}
+
+input {
+  width: 75%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid;
+  transition: 300ms all;
+}
+
+input:hover {
+  border-color: yellow;
+}
+
+span {
+  margin: 7px;
+  margin-right: 8cm;
+  color: yellow;
+}
+
+button {
+  margin-top: 20px;
+  width: 6cm;
+  padding: 15px;
+  border-radius: 15px;
+  border: 2px solid;
+  background: yellow;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 500ms;
+}
+
+button:hover {
+  border: 2px solid yellow;
+  color: yellow;
+  background-color: black;
+}
+
+#nombre {
+  margin-right: 68%;
+}
+
+#age {
+  margin-right: 72%;
+}
+
+#email {
+  margin-right: 72%;
+}
+
+#escribenos {
+  margin-right: 62%;
+}
+
+#msg {
+  height: 2cm;
+}
+
+.left {
+  width: 50%;
+  margin-right: 2cm;
+}
+
+.bars__menu {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 5%;
+  right: 2%;
+  transform: translate(-50%, -50%) scale(1);
+  cursor: pointer;
+}
+
+.bars__menu span {
+  display: none;
+  width: 100%;
+  height: 2.5px;
+  background-color: yellow;
+  margin-top: 0px;
+  transition: all 450ms;
+  transform-origin: 0px 100%;
+}
+
+.activeline1__bars-menu {
+  transform: rotate(45deg) translate(-2px, 1px);
+}
+
+.activeline2__bars-menu {
+  opacity: 0;
+  margin-left: -30px;
+}
+
+.activeline3__bars-menu {
+  transform: rotate(-45deg) translate(-2px, 2px);
+}
+
+@media screen and (max-width: 700px) {
+  .bars__menu {
+    z-index: 2;
+  }
+  .bars__menu span {
+    display: flex;
+    background: yellow;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  #excuses {
+    margin-left: 2px;
+    margin-right: 10px;
+  }
+  #contact {
+    flex-direction: column;
+  }
+  .left {
+    display: none;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 70vh;
+    align-items: center;
+    border: 3px solid black;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px black;
+    background-color: black;
+    margin-right: 0;
+    margin-bottom: 2.4cm;
+  }
+  .navbar {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 0%;
+    right: 0px;
+    background-color: yellow;
+    height: 100vh;
+    width: 100%;
+    border-radius: 5px;
+    z-index: 1;
+  }
+  @keyframes entrar {
+    0% {
+      transform: translateX(1000px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+  @keyframes salir {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(800px);
+    }
+  }
+  i {
+    color: yellow;
+  }
+  a {
+    color: black;
+    width: 20%;
+  }
+  a::after {
+    background: black;
+  }
+  #logo {
+    margin-top: 2cm;
+  }
+  .fa-solid {
+    color: black;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .left {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */
